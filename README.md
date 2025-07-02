@@ -11,11 +11,14 @@ Enables interactive drawing directly on the live video feed.
 ### Color Detection: 
 Utilizes HSV color space for robust detection of a specific color (green by default) as the "pen."
 
-### Intuitive Control: Allows users to draw by moving the detected object and select colors or clear the canvas by positioning the object over on-screen buttons.
+### Intuitive Control: 
+Allows users to draw by moving the detected object and select colors or clear the canvas by positioning the object over on-screen buttons.
 
-### OpenCV Application: Demonstrates practical use of OpenCV for tasks like video capture, color segmentation, contour detection, and drawing primitives.
+### OpenCV Application: 
+Demonstrates practical use of OpenCV for tasks like video capture, color segmentation, contour detection, and drawing primitives.
 
-### User Interface: Integrates simple UI elements (color selection rectangles and text labels) directly into the video stream for enhanced usability.
+### User Interface: 
+Integrates simple UI elements (color selection rectangles and text labels) directly into the video stream for enhanced usability.
 
 # Technical Breakdown:
 The "Air Canvas" project follows a clear sequence of operations:
