@@ -123,3 +123,11 @@ Releases the video capture object and destroys all OpenCV windows.
 
 ## Learnings & Feedback:
 I'd love to hear your thoughts and suggestions on this project! Feel free to provide any feedback on its functionality, code structure, potential improvements, or any other observations you might have.
+
+## Video Link:
+https://vimeo.com/1098236698
+
+## Output:
+![image](https://github.com/user-attachments/assets/16d07567-b272-41aa-9d0e-dbc205e14646)
+
+![image](https://github.com/user-attachments/assets/3fbd9774-9d77-4425-b5e7-b362801d5be2)
