@@ -98,18 +98,4 @@ Releases the video capture object and destroys all OpenCV windows.
 
 ## Learnings & Feedback:
 
-### This project offers excellent hands-on experience in:
-
-- Real-time Computer Vision: Implementing a system that processes video frames continuously.
-
-- Color-based Object Tracking: Using HSV color space for robust object detection and tracking.
-
-- Contour Analysis: Applying contour detection and analysis (cv2.findContours, cv2.contourArea, cv2.moments) to identify and locate objects.
-
-- Interactive Application Development: Creating a simple interactive application with on-screen controls.
-
-- Image Manipulation: Combining different image layers (bitwise_and, bitwise_or) to create the final output.
-
-The code is well-commented, making it easy to understand the logic. The use of a min_area threshold is a good practice to reduce noise. The inclusion of color selection and a clear function adds significant usability to the "Air Canvas."
-
-This "Air Canvas" project is a creative and effective demonstration of fundamental computer vision concepts applied to build an interactive drawing tool.
+I'd love to hear your thoughts and suggestions on this project! Feel free to provide any feedback on its functionality, code structure, potential improvements, or any other observations you might have.
