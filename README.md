@@ -5,9 +5,11 @@ This project implements an "Air Canvas" system that allows users to draw in real
 
 ## Key Highlights:
 
-### Real-time Drawing: Enables interactive drawing directly on the live video feed.
+### Real-time Drawing: 
+Enables interactive drawing directly on the live video feed.
 
-### Color Detection: Utilizes HSV color space for robust detection of a specific color (green by default) as the "pen."
+### Color Detection: 
+Utilizes HSV color space for robust detection of a specific color (green by default) as the "pen."
 
 ### Intuitive Control: Allows users to draw by moving the detected object and select colors or clear the canvas by positioning the object over on-screen buttons.
 
