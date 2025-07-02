@@ -1,59 +1,62 @@
-**Project Review: Air Canvas**
+# Project Review: Air Canvas
+
 This project implements an "Air Canvas" system that allows users to draw in real-time on a virtual canvas using hand gestures, specifically by detecting a green-colored object. It leverages OpenCV for video processing, color detection, and drawing functionalities.
 
-Key Highlights:
-Real-time Drawing: Enables interactive drawing directly on the live video feed.
 
-Color Detection: Utilizes HSV color space for robust detection of a specific color (green by default) as the "pen."
+## Key Highlights:
 
-Intuitive Control: Allows users to draw by moving the detected object and select colors or clear the canvas by positioning the object over on-screen buttons.
+### Real-time Drawing: Enables interactive drawing directly on the live video feed.
 
-OpenCV Application: Demonstrates practical use of OpenCV for tasks like video capture, color segmentation, contour detection, and drawing primitives.
+### Color Detection: Utilizes HSV color space for robust detection of a specific color (green by default) as the "pen."
 
-User Interface: Integrates simple UI elements (color selection rectangles and text labels) directly into the video stream for enhanced usability.
+### Intuitive Control: Allows users to draw by moving the detected object and select colors or clear the canvas by positioning the object over on-screen buttons.
 
-Technical Breakdown:
+### OpenCV Application: Demonstrates practical use of OpenCV for tasks like video capture, color segmentation, contour detection, and drawing primitives.
+
+### User Interface: Integrates simple UI elements (color selection rectangles and text labels) directly into the video stream for enhanced usability.
+
+# Technical Breakdown:
 The "Air Canvas" project follows a clear sequence of operations:
 
-Initialization:
+### 1. Initialization:
 
-Imports cv2 and numpy.
+- Imports cv2 and numpy.
 
-Defines a set of drawing colors (blue, magenta, green, red, yellow) and sets a default color.
+- Defines a set of drawing colors (blue, magenta, green, red, yellow) and sets a default color.
 
-Sets a min_area threshold for contours to filter out small, noisy detections.
+- Sets a min_area threshold for contours to filter out small, noisy detections.
 
-Initializes cv2.VideoCapture(0) to access the default webcam and retrieves frame width and height.
+- Initializes cv2.VideoCapture(0) to access the default webcam and retrieves frame width and height.
 
-Creates a blank canvas (np.zeros) of the same dimensions as the video frame, which will serve as the drawing surface.
+- Creates a blank canvas (np.zeros) of the same dimensions as the video frame, which will serve as the drawing surface.
 
-Defines lower_bound and upper_bound arrays for green color detection in the HSV color space.
+- Defines lower_bound and upper_bound arrays for green color detection in the HSV color space.
 
-Creates a kernel for morphological operations (dilation).
+- Creates a kernel for morphological operations (dilation).
 
-Initializes previous_center_point to 0 to track the "pen" movement.
+- Initializes previous_center_point to 0 to track the "pen" movement.
 
-Main Loop (while True):
+### 2. Main Loop (while True):
 
-Frame Capture: Reads each frame from the webcam.
+- Frame Capture: Reads each frame from the webcam.
 
-Frame Flipping: Flips the frame horizontally (cv2.flip) for a more natural mirror-like view.
+- Frame Flipping: Flips the frame horizontally (cv2.flip) for a more natural mirror-like view.
 
-Color Segmentation:
+- Color Segmentation:
 
-Converts the frame from BGR to HSV color space.
+   - Converts the frame from BGR to HSV color space.
 
-Creates a binary mask (cv2.inRange) by segmenting out the green color based on the defined HSV bounds.
+   - Creates a binary mask (cv2.inRange) by segmenting out the green color based on the defined HSV bounds.
 
-Applies dilation (cv2.dilate) to the mask to enlarge the segmented area and connect broken regions.
+   - Applies dilation (cv2.dilate) to the mask to enlarge the segmented area and connect broken regions.
 
-Contour Detection: Finds all contours in the binary mask.
+- Contour Detection: Finds all contours in the binary mask.
 
-Drawing Logic:
+- Drawing Logic:
 
-If contours are detected:
+  - If contours are detected:
 
-Identifies the biggest contour (cmax) based on area.
+  - Identifies the biggest contour (cmax) based on area.
 
 Calculates the area of cmax.
 
