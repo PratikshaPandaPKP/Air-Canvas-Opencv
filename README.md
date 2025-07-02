@@ -1,4 +1,4 @@
-Project Review: Air Canvas
+**Project Review: Air Canvas**
 This project implements an "Air Canvas" system that allows users to draw in real-time on a virtual canvas using hand gestures, specifically by detecting a green-colored object. It leverages OpenCV for video processing, color detection, and drawing functionalities.
 
 Key Highlights:
